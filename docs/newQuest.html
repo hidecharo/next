@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>新規クエスト発行</title>
+  <meta name="description" content="新規クエストを発行します。" />
+  <meta name="viewport" content="initial-scale=1" />
+  <style>
+.input {
+  max-width: 80%
+}
+  </style>
+</head>
+<body>
+<h1>新規クエスト発行</h1>
+<form id="newQuest">
+<ul>
+  <li><label><input class="input" type="password" name="token" value="" size="72" placeholder="token (required)" required="required" /></label></li>
+  <li><label><input class="input" type="text" name="title" value="" size="72" placeholder="title (required)" required="required" /></label></li>
+  <li><label><textarea class="input" name="body" cols="72" rows="4" placeholder="body">
+- 
+- 
+- 
+</textarea></label></li>
+  <li><label><input type="checkbox" name="assignAll" value="ALL" />全員に割り当てる</label></li>
+  <li><label><input type="radio" name="priority" value="MDU6TGFiZWwxNjQxMTczMDQw" required="required" />-priority: 1</label></li>
+  <li><label><input type="radio" name="priority" value="MDU6TGFiZWwxNjQxMTczMDQx" required="required" checked="checked" />-priority: 3</label></li>
+  <li><label><input type="radio" name="priority" value="MDU6TGFiZWwxNjQxMTczMDQy" required="required" />-priority: 5</label></li>
+  <li><label><input type="radio" name="cost-pre" value="MDU6TGFiZWwxNjQxMTczMDQz" required="required" />cost-pre: 0</label></li>
+  <li><label><input type="radio" name="cost-pre" value="MDU6TGFiZWwxNjQxMTczMDQ0" required="required" />cost-pre: 1</label></li>
+  <li><label><input type="radio" name="cost-pre" value="MDU6TGFiZWwxNjQxMTczMDQ1" required="required" />cost-pre: 2</label></li>
+  <li><label><input type="radio" name="cost-pre" value="MDU6TGFiZWwxNjQxMTczMDQ2" required="required" checked="checked" />cost-pre: 3</label></li>
+  <li><label><input type="radio" name="cost-pre" value="MDU6TGFiZWwxNjQxMTczMDQ3" required="required" />cost-pre: 5</label></li>
+  <li><label><input type="radio" name="cost-pre" value="MDU6TGFiZWwxNjQxMTczMDQ4" required="required" />cost-pre: ?</label></li>
+  <li><label><input class="input" type="text" name="milestoneId" value="" size="72" placeholder="milestoneId" /></label></li>
+  <li><label><button class="input" type="submit" name="submit" value="SUBMIT" />クエスト発行</button></label></li>
+  <li><label><textarea class="input" name="result" cols="72" rows="12" placeholder="result (readonly)" readonly="readonly"></textarea></label></li>
+</ul>
+</form>
+<script>
+// NOTE 動作確認ブラウザ: 20191027 Mac Firefox/Chrome最新版
+
+// scope生成のために関数で囲み、即時実行
+(() => {
+const $newQuest = document.querySelector('#newQuest')
+const $token = $newQuest.querySelector('input[name="token"]')
+const $title = $newQuest.querySelector('input[name="title"]')
+const $body = $newQuest.querySelector('textarea[name="body"]')
+const $milestoneId = $newQuest.querySelector('input[name="milestoneId"]')
+const $submit = $newQuest.querySelector('button[name="submit"]')
+const $result = $newQuest.querySelector('textarea[name="result"]')
+const defaultBody = $body.value
+
+$newQuest.addEventListener('submit', e => {
+  // ブラウザデフォルト挙動の画面遷移を停止（後にreturn falseが必要な模様）
+  e.preventDefault()
+
+  // 初期化
+  // checkedは、submit内で実行しないと、デフォルト値が選ばれてしまう
+  const $assignAll = $newQuest.querySelector('input[name="assignAll"]:checked')
+  const $priority = $newQuest.querySelector('input[name="priority"]:checked')
+  const $costPre = $newQuest.querySelector('input[name="cost-pre"]:checked')
+  $result.value = ''
+
+  // 二度押し防止（投稿を正常に行うため、1ミリ秒遅延させる）
+  // NOTE 今はsetTimeoutは不要な可能性もあり（要確認）
+  setTimeout(() => {
+    $submit.disabled = true
+  }, 1)
+
+  // リクエスト生成
+  const url = 'https://api.github.com/graphql'
+
+  const token = $token.value
+  const headers = {
+    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json; charset=UTF-8',
+  }
+
+  const query = `mutation($input: CreateIssueInput!) {
+    createIssue(input: $input) {
+      issue {
+        id
+        url
+        title
+      }
+    }
+  }`
+  const input = {
+    repositoryId: configs.GITHUB_REPOSITORY_ID,
+    title: $title.value,
+    body: $body.value,
+    labelIds: [
+      $priority.value,
+      $costPre.value,
+    ],
+    projectIds: configs.GITHUB_TODO_PROJECT_IDS,
+  }
+  if ($assignAll) {
+    input.assigneeIds = configs.GITHUB_TODO_ASSIGNEE_IDS
+  }
+  if ($milestoneId.value) {
+    input.milestoneId = $milestoneId.value
+  }
+  console.log(input)
+  const variables = {
+    input,
+  }
+  const payload = {
+    query,
+    variables,
+  }
+
+  const options = {
+    method: 'post',
+    headers,
+    body: JSON.stringify(payload),
+  }
+
+  // リクエスト実行
+  fetch(url, options)
+    .then(response => response.json())
+    .then(data => {
+      $result.value = JSON.stringify(data, null, 2)
+      // エラーがない場合、一部入力を初期化
+      if (!data.errors) {
+        $title.value = ''
+        $body.value = defaultBody
+      }
+    })
+    .catch(e => {
+      $result.value = e.message
+      console.error(e)
+    })
+    // APIリクエスト完了後、二度押し防止解除
+    .finally(() => {
+      $submit.disabled = false
+    })
+
+  // ブラウザデフォルト挙動の画面遷移を停止
+  return false
+})
+
+const configs = {
+  GITHUB_REPOSITORY_ID: 'MDEwOlJlcG9zaXRvcnkyMTc4NjM0OTc=',
+  GITHUB_TODO_ASSIGNEE_IDS: [
+    // 'MDQ6VXNlcjQzMjU1ODgw', // adachi-swivel
+    // 'MDQ6VXNlcjQzNDM1OTg1', // bac0907
+    'MDQ6VXNlcjE2NTA1Mjcx', // itomakiweb
+    // 'MDQ6VXNlcjQzMTE0NDQx', // kazucharo
+    // 'MDQ6VXNlcjQ1MDA2Njgz', // tanukinoyu
+    // 'MDQ6VXNlcjQ0MjUyMzIx', // undine411
+  ],
+  GITHUB_TODO_PROJECT_IDS: [
+    'MDc6UHJvamVjdDM0MjgwNTE=', // Quest
+  ],
+}
+})()
+</script>
+</body>
+</html>
