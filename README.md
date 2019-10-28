@@ -16,3 +16,20 @@
 1. web [pull request](https://github.com/itomakiweb-corp/next/pulls), reviewersを指定する
 1. web reviewersのレビュー/マージ/new-branch削除を待つ
 1. 最初に戻る
+
+## Env
+
+- install
+  - https://git-scm.com/downloads
+  - https://developer.android.com/studio?hl=ja
+- open Android Studio
+  - Check out project from Version Control, Git
+  - https://github.com/itomakiweb-corp/bank.git
+- Run 'app'
+  - Open AVD Manager
+  - Create Virtual Device
+  - Pixel 3, Q (Android 10.0)
+- Other for Mac
+  - https://brew.sh/index_ja
+- bots
+  - https://drive.google.com/open?id=1L7opt_yhLk9868mDa7923EuLmFjPkRY4YRsqUhKSQ71B2-hSJG0QaDLn
