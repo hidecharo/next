@@ -24,7 +24,7 @@
   - https://developer.android.com/studio?hl=ja
 - open Android Studio
   - Check out project from Version Control, Git
-  - https://github.com/itomakiweb-corp/bank.git
+  - https://github.com/itomakiweb-corp/next.git
 - Run 'app'
   - Open AVD Manager
   - Create Virtual Device
