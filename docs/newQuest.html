@@ -52,7 +52,11 @@ const $result = $newQuest.querySelector('textarea[name="result"]')
 
 const defaultTitle = $title.value
 const defaultBody = $body.value
-$title.focus()
+const focusEnd = $element => {
+  $element.focus()
+  $element.selectionStart = $element.selectionEnd = $element.value.length
+}
+focusEnd($title)
 
 $newQuest.addEventListener('submit', e => {
   // ブラウザデフォルト挙動の画面遷移を停止（後にreturn falseが必要な模様）
@@ -129,7 +133,7 @@ $newQuest.addEventListener('submit', e => {
       if (!data.errors) {
         $title.value = defaultTitle
         $body.value = defaultBody
-        $title.focus()
+        focusEnd($title)
       }
     })
     .catch(e => {
