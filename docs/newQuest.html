@@ -49,8 +49,10 @@ const $body = $newQuest.querySelector('textarea[name="body"]')
 const $milestoneId = $newQuest.querySelector('input[name="milestoneId"]')
 const $submit = $newQuest.querySelector('button[name="submit"]')
 const $result = $newQuest.querySelector('textarea[name="result"]')
-$title.focus()
+
+const defaultTitle = $title.value
 const defaultBody = $body.value
+$title.focus()
 
 $newQuest.addEventListener('submit', e => {
   // ブラウザデフォルト挙動の画面遷移を停止（後にreturn falseが必要な模様）
@@ -125,7 +127,7 @@ $newQuest.addEventListener('submit', e => {
       $result.value = JSON.stringify(data, null, 2)
       // エラーがない場合、一部入力を初期化
       if (!data.errors) {
-        $title.value = ''
+        $title.value = defaultTitle
         $body.value = defaultBody
         $title.focus()
       }
