@@ -60,7 +60,8 @@ function postDoneAndTodoToSlack() {
   const doneAndTodoQuest = postIssueToGithub(input)
   log(doneAndTodoQuest)
 
-  const doneAndTodoMessage = postMessageToSlack(body)
+  const slackBody = body + '  - ' + doneAndTodoQuest.data.createIssue.issue.url
+  const doneAndTodoMessage = postMessageToSlack(slackBody)
   log(doneAndTodoMessage)
 }
 
@@ -134,7 +135,7 @@ function fetchMilestoneFromGithub(states, direction) {
   const query = 'query($owner: String!, $name: String!, $states: [MilestoneState!], $direction: OrderDirection!) {\
     repository(owner: $owner, name: $name) {\
       milestones(first:1, states: $states, orderBy: { field: DUE_DATE, direction: $direction }) {\
-        edges { node { id, url, title } }\
+        edges { node { id, url, number, title } }\
       }\
     }\
   }'
