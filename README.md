@@ -8,6 +8,24 @@
 - [Contributors](https://github.com/itomakiweb-corp/next/graphs/contributors)
 - [wiki](https://github.com/itomakiweb-corp/next/wiki)
 - [materials](https://github.com/itomakiweb-corp/dev/tree/master/materials)
+    - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181113-concept-sheet.pdf
+    - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181122-rough.pdf
+    - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181129-brushup.pdf
+    - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/logo-regulation.pdf
+- https://github.com/itomakiweb-corp/bank
+- https://github.com/itomakiweb-corp/status-reader
+- https://github.com/itomakiweb-corp/status-reader-api
+- https://itomakiweb.com/
+    - https://github.com/itomakiweb-corp/itomakiweb-corp.github.io
+    - https://github.com/itomakiweb-corp/corp
+    - https://github.com/itomakiweb-corp/dev
+- https://hemino.com/
+    - https://github.com/itomakiweb-corp/hemino.com
+- http://www.pluto-dm.com/
+    - https://github.com/itomakiweb-corp/pluto-dm.com
+- https://github.com/orgs/itomakiweb-corp/people
+    - https://github.com/itomakiweb-corp/people
+    - https://github.com/itomakiweb-corp/puzzle-terms
 
 ## Env
 
@@ -69,6 +87,8 @@
     - https://support.freee.co.jp/hc/ja
     - https://www.hanayamatoys.co.jp/
 - etc
+    - https://www.amazon.co.jp/clouddrive/all
+    - https://drive.google.com/drive/my-drive
     - https://paiza.io/ja/projects/new
     - https://paiza.jp/challenges/info
     - othello, https://www.youtube.com/watch?v=cPDCpk9ZhDM&app=desktop
