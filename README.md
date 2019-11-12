@@ -2,11 +2,12 @@
 
 - [クエスト追加](https://itomakiweb.com/next/newQuest)
 - [クエスト一覧](https://github.com/itomakiweb-corp/next/projects/1)
-- [先週クエスト](https://github.com/itomakiweb-corp/next/milestones?state=closed)
 - [今週クエスト](https://github.com/itomakiweb-corp/next/milestones)
+- [先週クエスト](https://github.com/itomakiweb-corp/next/milestones?state=closed)
 - [pull request](https://github.com/itomakiweb-corp/next/pulls)
 - [Contributors](https://github.com/itomakiweb-corp/next/graphs/contributors)
 - [wiki](https://github.com/itomakiweb-corp/next/wiki)
+- [materilas](https://github.com/itomakiweb-corp/dev/tree/master/materials)
 
 ## Env
 
