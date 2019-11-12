@@ -7,7 +7,7 @@
 - [pull request](https://github.com/itomakiweb-corp/next/pulls)
 - [Contributors](https://github.com/itomakiweb-corp/next/graphs/contributors)
 - [wiki](https://github.com/itomakiweb-corp/next/wiki)
-- [materilas](https://github.com/itomakiweb-corp/dev/tree/master/materials)
+- [materials](https://github.com/itomakiweb-corp/dev/tree/master/materials)
 
 ## Env
 
