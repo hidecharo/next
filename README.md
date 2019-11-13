@@ -1,31 +1,37 @@
 ## Flow
 
-- [クエスト追加](https://itomakiweb.com/next/newQuest)
-- [クエスト一覧](https://github.com/itomakiweb-corp/next/projects/1)
-- [今週クエスト](https://github.com/itomakiweb-corp/next/milestones)
-- [先週クエスト](https://github.com/itomakiweb-corp/next/milestones?state=closed)
-- [pull request](https://github.com/itomakiweb-corp/next/pulls)
-- [Contributors](https://github.com/itomakiweb-corp/next/graphs/contributors)
-- [wiki](https://github.com/itomakiweb-corp/next/wiki)
-- [materials](https://github.com/itomakiweb-corp/dev/tree/master/materials)
-    - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181113-concept-sheet.pdf
-    - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181122-rough.pdf
-    - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181129-brushup.pdf
-    - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/logo-regulation.pdf
-- https://github.com/itomakiweb-corp/bank
-- https://github.com/itomakiweb-corp/status-reader
-- https://github.com/itomakiweb-corp/status-reader-api
-- https://itomakiweb.com/
-    - https://github.com/itomakiweb-corp/itomakiweb-corp.github.io
-    - https://github.com/itomakiweb-corp/corp
-    - https://github.com/itomakiweb-corp/dev
-- https://hemino.com/
-    - https://github.com/itomakiweb-corp/hemino.com
-- http://www.pluto-dm.com/
-    - https://github.com/itomakiweb-corp/pluto-dm.com
-- https://github.com/orgs/itomakiweb-corp/people
-    - https://github.com/itomakiweb-corp/people
-    - https://github.com/itomakiweb-corp/puzzle-terms
+- always
+    - [クエスト追加](https://itomakiweb.com/next/newQuest)
+    - [クエスト一覧](https://github.com/itomakiweb-corp/next/projects/1)
+    - [今週クエスト](https://github.com/itomakiweb-corp/next/milestones)
+    - [先週クエスト](https://github.com/itomakiweb-corp/next/milestones?state=closed)
+- soon
+    - https://accounts.secure.freee.co.jp/login/accounting?o=true&a=false&e=0
+    - https://console.firebase.google.com/u/0/project/itomakiweb-bbs/database/firestore/usage/last-30d/reads
+- ref
+    - [pull request](https://github.com/itomakiweb-corp/next/pulls)
+    - [Contributors](https://github.com/itomakiweb-corp/next/graphs/contributors)
+    - [wiki](https://github.com/itomakiweb-corp/next/wiki)
+    - [materials](https://github.com/itomakiweb-corp/dev/tree/master/materials)
+        - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181113-concept-sheet.pdf
+        - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181122-rough.pdf
+        - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181129-brushup.pdf
+        - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/logo-regulation.pdf
+- other
+    - https://github.com/itomakiweb-corp/bank
+    - https://github.com/itomakiweb-corp/status-reader
+    - https://github.com/itomakiweb-corp/status-reader-api
+    - https://itomakiweb.com/
+        - https://github.com/itomakiweb-corp/itomakiweb-corp.github.io
+        - https://github.com/itomakiweb-corp/corp
+        - https://github.com/itomakiweb-corp/dev
+    - https://hemino.com/
+        - https://github.com/itomakiweb-corp/hemino.com
+    - http://www.pluto-dm.com/
+        - https://github.com/itomakiweb-corp/pluto-dm.com
+    - https://github.com/orgs/itomakiweb-corp/people
+        - https://github.com/itomakiweb-corp/people
+        - https://github.com/itomakiweb-corp/puzzle-terms
 
 ## Env
 
@@ -69,7 +75,7 @@
 - android
     - https://developer.android.com/studio?hl=ja
     - https://tech.studyplus.co.jp/entry/2019/10/07/094916
-    - https://github.com/Tsutou/GithubClient/blob/Kotlin/app/src/main/java/jp/sample/tsutou/githubClient/service/model/User.kt
+    - https://github.com/Tsutou/GithubClient
 - ios
     - https://github.com/hatena/Hatena-Textbook/blob/master/swift-development-apps.md
 - ci
@@ -78,6 +84,7 @@
     - https://developer.github.com/v4/explorer/
     - https://developer.github.com/v3/
 - corp
+    - https://accounts.secure.freee.co.jp/login/accounting?o=true&a=false&e=0
     - 創立費 勘定科目
     - https://www.freee.co.jp/kb/kb-launch/cost-expenses/
     - https://support.freee.co.jp/hc/ja/articles/204657714--%E6%B3%95%E4%BA%BA-%E5%89%B5%E7%AB%8B%E8%B2%BB-%E9%96%8B%E6%A5%AD%E8%B2%BB%E3%82%92%E5%85%A5%E5%8A%9B%E3%81%99%E3%82%8B
