@@ -42,6 +42,7 @@
 
 // scope生成のために関数で囲み、即時実行
 (() => {
+// 初期化1
 const $newQuest = document.querySelector('#newQuest')
 const $token = $newQuest.querySelector('input[name="token"]')
 const $title = $newQuest.querySelector('input[name="title"]')
@@ -52,6 +53,11 @@ const $result = $newQuest.querySelector('textarea[name="result"]')
 
 const defaultTitle = $title.value
 const defaultBody = $body.value
+
+// ローカルストレージから参照
+$token.value = localStorage.getItem('GITHUB_TOKEN')
+
+// タイトルフォームにフォーカス
 const focusEnd = $element => {
   $element.focus()
   $element.selectionStart = $element.selectionEnd = $element.value.length
@@ -62,7 +68,7 @@ $newQuest.addEventListener('submit', e => {
   // ブラウザデフォルト挙動の画面遷移を停止（後にreturn falseが必要な模様）
   e.preventDefault()
 
-  // 初期化
+  // 初期化2
   // checkedは、submit内で実行しないと、デフォルト値が選ばれてしまう
   const $assignAll = $newQuest.querySelector('input[name="assignAll"]:checked')
   const $priority = $newQuest.querySelector('input[name="priority"]:checked')
@@ -74,6 +80,9 @@ $newQuest.addEventListener('submit', e => {
   setTimeout(() => {
     $submit.disabled = true
   }, 1)
+
+  // ローカルストレージに保存
+  localStorage.setItem('GITHUB_TOKEN', $token.value)
 
   // リクエスト生成
   const url = 'https://api.github.com/graphql'
