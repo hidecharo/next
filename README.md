@@ -5,6 +5,7 @@
     - [クエスト一覧](https://github.com/itomakiweb-corp/next/projects/1)
     - [今週クエスト](https://github.com/itomakiweb-corp/next/milestones)
     - [先週クエスト](https://github.com/itomakiweb-corp/next/milestones?state=closed)
+    - [bot: gas](https://drive.google.com/open?id=1L7opt_yhLk9868mDa7923EuLmFjPkRY4YRsqUhKSQ71B2-hSJG0QaDLn)
 - soon
     - https://accounts.secure.freee.co.jp/login/accounting?o=true&a=false&e=0
     - https://console.firebase.google.com/u/0/project/itomakiweb-bbs/database/firestore/usage/last-30d/reads
@@ -100,5 +101,3 @@
     - https://paiza.jp/challenges/info
     - othello, https://www.youtube.com/watch?v=cPDCpk9ZhDM&app=desktop
     - https://www.nnn.ed.nico/pages/introduction/price/
-- bots
-    - https://drive.google.com/open?id=1L7opt_yhLk9868mDa7923EuLmFjPkRY4YRsqUhKSQ71B2-hSJG0QaDLn
