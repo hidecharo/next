@@ -15,9 +15,9 @@
 
 ### ref
 
-- [pull request](https://github.com/itomakiweb-corp/next/pulls)
+- [Pull Requests](https://github.com/itomakiweb-corp/next/pulls)
 - [Contributors](https://github.com/itomakiweb-corp/next/graphs/contributors)
-- [wiki](https://github.com/itomakiweb-corp/next/wiki)
+- [Wiki](https://github.com/itomakiweb-corp/next/wiki)
 - [materials](https://github.com/itomakiweb-corp/dev/tree/master/materials)
     - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181113-concept-sheet.pdf
     - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181122-rough.pdf
