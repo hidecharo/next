@@ -14,7 +14,7 @@ function postDoneAndTodoToSlack() {
 
   const dueDate = new Date()
   const dueDateFormat = getDate8(dueDate)
-  const title = 'dev: 先週のまとめと今週と来週の予定を確認して検討する（${dueDateFormat}）'
+  const title = 'dev: confirm done quest, todo quest at ${dueDateFormat}'
     .replace('${dueDateFormat}', dueDateFormat)
   log(title)
 
@@ -26,24 +26,23 @@ function postDoneAndTodoToSlack() {
   const doneUrl = doneMilestone.url + '?closed=1'
   const todoUrl = todoMilestone.url
   const body = '\
-- [ ] 作業の流れ\n\
-  - ${configs.URL_MAIN}\n\
-- [ ] 先週やった内容\n\
+- [ ] done quest\n\
   - ${doneUrl}\n\
-- [ ] 今週やる予定\n\
+- [ ] todo quest\n\
   - ${todoUrl}\n\
-  - Milestoneをきちんと設定する\n\
-  - 今週の作業が完了したら、Milestoneをクローズする\n\
-- [ ] クエスト追加\n\
-  - ${configs.URL_NEW_QUEST}\n\
-- [ ] 以下から自動送信\n\
+- [ ] list quest\n\
+  - ${configs.URL_QUEST_LIST}\n\
+  - ${configs.URL_QUEST_NEW}\n\
+- by\n\
+  - ${configs.URL_MAIN}\n\
   - ${configs.URL_GAS}\n\
   - ${configs.URL_GAS_SOURCE}\n\
 '
-    .replace('${configs.URL_MAIN}', configs.URL_MAIN)
     .replace('${doneUrl}', doneUrl)
     .replace('${todoUrl}', todoUrl)
-    .replace('${configs.URL_NEW_QUEST}', configs.URL_NEW_QUEST)
+    .replace('${configs.URL_QUEST_LIST}', configs.URL_QUEST_LIST)
+    .replace('${configs.URL_QUEST_NEW}', configs.URL_QUEST_NEW)
+    .replace('${configs.URL_MAIN}', configs.URL_MAIN)
     .replace('${configs.URL_GAS}', configs.URL_GAS)
     .replace('${configs.URL_GAS_SOURCE}', configs.URL_GAS_SOURCE)
   log(body)
@@ -62,7 +61,7 @@ function postDoneAndTodoToSlack() {
 
   const slackBody = body + '  - ' + doneAndTodoQuest.data.createIssue.issue.url
   const doneAndTodoMessage = postMessageToSlack(slackBody)
-  log(doneAndTodoMessage)
+  // log(doneAndTodoMessage)
 }
 
 /**
@@ -350,7 +349,8 @@ function getConfigs() {
     LOCALE_HOUR: +9, // Asia/Tokyo
 
     URL_MAIN: 'https://github.com/itomakiweb-corp/next#flow',
-    URL_NEW_QUEST: 'https://itomakiweb.com/next/newQuest',
+    URL_QUEST_LIST: 'https://github.com/itomakiweb-corp/next/projects/1',
+    URL_QUEST_NEW: 'https://itomakiweb.com/next/newQuest',
     URL_GAS: 'https://drive.google.com/open?id=1L7opt_yhLk9868mDa7923EuLmFjPkRY4YRsqUhKSQ71B2-hSJG0QaDLn',
     URL_GAS_SOURCE: 'https://github.com/itomakiweb-corp/next/blob/master/tools/gas-main.js',
 
