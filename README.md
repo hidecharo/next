@@ -11,7 +11,9 @@
 ### soon
 
 - https://accounts.secure.freee.co.jp/login/accounting?o=true&a=false&e=0
-- https://console.firebase.google.com/u/0/project/itomakiweb-bbs/database/firestore/usage/last-30d/reads
+- https://itomakiweb-corp.web.app/
+- yarn deploy
+- https://console.firebase.google.com/u/0/project/itomakiweb-corp/database/firestore/usage/last-30d/reads
 
 ### ref
 
