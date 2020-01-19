@@ -4,7 +4,7 @@
   "description": "Let's try it!",
   "scripts": {
     "serve": "cd app-firebase; firebase serve --only hosting",
-    "deploy": "cd app-firebase; firebase deploy -m ${npm_package_version} --only hosting#,firestore:indexes"
+    "deploy": "cd app-firebase; firebase deploy -m ${npm_package_version} --only hosting"
   },
   "main": "index.js",
   "repository": "https://github.com/itomakiweb-corp/next.git",
