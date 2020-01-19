@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Let's try it!",
   "scripts": {
-    "deploy": "cd app-firebase; firebase deploy"
+    "serve": "cd app-firebase; firebase serve --only hosting",
+    "deploy": "cd app-firebase; firebase deploy -m ${npm_package_version} --only hosting#,firestore:indexes"
   },
   "main": "index.js",
   "repository": "https://github.com/itomakiweb-corp/next.git",

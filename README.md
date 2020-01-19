@@ -10,10 +10,14 @@
 
 ### soon
 
-- https://accounts.secure.freee.co.jp/login/accounting?o=true&a=false&e=0
 - https://itomakiweb-corp.web.app/
-- yarn deploy
-- https://console.firebase.google.com/u/0/project/itomakiweb-corp/database/firestore/usage/last-30d/reads
+    - yarn deploy
+    - Redirect > Static > Rewrite > Custom 404 > Default 404
+    - https://firebase.google.com/docs/firestore
+    - https://firebase.google.com/docs/hosting
+    - https://firebase.google.com/docs/cli
+    - https://console.firebase.google.com/u/0/project/itomakiweb-corp/database/firestore/usage/last-30d/reads
+- https://accounts.secure.freee.co.jp/login/accounting?o=true&a=false&e=0
 
 ### ref
 
