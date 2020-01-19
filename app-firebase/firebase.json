@@ -16,6 +16,48 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source" : "/dev/",
+        "destination" : "/corp/core-concept",
+        "type" : 301
+      },
+      {
+        "source" : "/corp/foundation",
+        "destination" : "/corp/core-concept",
+        "type" : 301
+      },
+      {
+        "source" : "/corp/personal-history",
+        "destination" : "/corp/core-concept",
+        "type" : 301
+      },
+      {
+        "source" : "/corp/curriculum-vitae",
+        "destination" : "/corp/core-concept",
+        "type" : 301
+      },
+      {
+        "source" : "/corp/",
+        "destination" : "/corp/business-plan",
+        "type" : 301
+      },
+      {
+        "source" : "/dev/structure",
+        "destination" : "/corp/business-plan",
+        "type" : 301
+      },
+      {
+        "source" : "/corp/**",
+        "destination" : "/corp/core-concept",
+        "type" : 301
+      },
+      {
+        "source" : "/dev/**",
+        "destination" : "/corp/core-concept",
+        "type" : 301
+      }
+    ],
     "rewrites": [
       {
         "source": "**",
