@@ -2,9 +2,12 @@
   "name": "itomakiweb-corp",
   "version": "1.0.0",
   "description": "Let's try it!",
+  "scripts": {
+    "deploy": "cd app-firebase; firebase deploy"
+  },
   "main": "index.js",
   "repository": "https://github.com/itomakiweb-corp/next.git",
-  "author": "Hide Charo (ひで) <59493482+hidecharo@users.noreply.github.com>",
+  "author": "itomakiweb-corp <itomakiweb-corp@googlegroups.com>",
   "license": "MIT",
   "private": true
 }
