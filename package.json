@@ -1,0 +1,10 @@
+{
+  "name": "itomakiweb-corp",
+  "version": "1.0.0",
+  "description": "Let's try it!",
+  "main": "index.js",
+  "repository": "https://github.com/itomakiweb-corp/next.git",
+  "author": "Hide Charo (ひで) <59493482+hidecharo@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true
+}
