@@ -10,6 +10,8 @@
 
 ### soon
 
+- http://localhost:5000/
+    - yarn serve
 - https://itomakiweb-corp.web.app/
     - yarn deploy
     - Redirect > Static > Rewrite > Custom 404 > Default 404

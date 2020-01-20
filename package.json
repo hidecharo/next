@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Let's try it!",
   "scripts": {
-    "serve": "cd app-firebase; firebase serve --only hosting",
-    "deploy": "cd app-firebase; firebase deploy -m ${npm_package_version} --only hosting"
+    "flutter-build-web": "cd app-flutter; flutter build web; rsync -avCc --delete build/web/ ../app-firebase/public/",
+    "serve": "cd app-firebase; yarn flutter-build-web; firebase serve --only hosting",
+    "deploy": "cd app-firebase; yarn flutter-build-web; firebase deploy -m ${npm_package_version} --only hosting"
   },
   "main": "index.js",
   "repository": "https://github.com/itomakiweb-corp/next.git",
