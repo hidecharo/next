@@ -1,6 +1,6 @@
 # web
 
-A new Flutter project.
+Let&#x27;s try it!
 
 ## Getting Started
 
