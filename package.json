@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Let's try it!",
   "scripts": {
+    "build": "yarn flutter-build-web; yarn docs-build-web",
+    "docs-build-web": "cd docs; cp newQuest.html ../app-firebase/public/",
     "flutter-build-web": "cd app-flutter; flutter build web; rsync -avCc --exclude=.gitkeep --delete build/web/ ../app-firebase/public/",
-    "serve": "cd app-firebase; yarn flutter-build-web; firebase serve --only hosting",
-    "deploy": "cd app-firebase; yarn flutter-build-web; firebase deploy -m ${npm_package_version} --only hosting"
+    "serve": "cd app-firebase; yarn build; firebase serve --only hosting",
+    "deploy": "cd app-firebase; yarn build; firebase deploy -m ${npm_package_version} --only hosting"
   },
   "main": "index.js",
   "repository": "https://github.com/itomakiweb-corp/next.git",
