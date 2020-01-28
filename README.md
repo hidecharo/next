@@ -2,7 +2,7 @@
 
 ### always
 
-- [Quest: new](https://itomakiweb.com/next/newQuest)
+- [Quest: new](https://itomakiweb-corp.web.app/newQuest.html)
 - [Quest: List](https://github.com/hidecharo/next/projects/1)
 - [Quest: Todo](https://github.com/hidecharo/next/milestones)
 - [Quest: Done](https://github.com/hidecharo/next/milestones?state=closed)
