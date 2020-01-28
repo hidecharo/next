@@ -2,11 +2,11 @@
 
 ### always
 
-- [クエスト追加](https://itomakiweb.com/next/newQuest)
-- [クエスト一覧](https://github.com/itomakiweb-corp/next/projects/1)
-- [今週クエスト](https://github.com/itomakiweb-corp/next/milestones)
-- [先週クエスト](https://github.com/itomakiweb-corp/next/milestones?state=closed)
-- [bot: gas](https://drive.google.com/open?id=1L7opt_yhLk9868mDa7923EuLmFjPkRY4YRsqUhKSQ71B2-hSJG0QaDLn)
+- [Quest: new](https://itomakiweb.com/next/newQuest)
+- [Quest: List](https://github.com/hidecharo/next/projects/1)
+- [Quest: Todo](https://github.com/hidecharo/next/milestones)
+- [Quest: Done](https://github.com/hidecharo/next/milestones?state=closed)
+- [General: bot](https://drive.google.com/open?id=1L7opt_yhLk9868mDa7923EuLmFjPkRY4YRsqUhKSQ71B2-hSJG0QaDLn)
 
 ### soon
 
@@ -19,13 +19,12 @@
     - https://firebase.google.com/docs/hosting
     - https://firebase.google.com/docs/cli
     - https://console.firebase.google.com/u/0/project/itomakiweb-corp/database/firestore/usage/last-30d/reads
-- https://accounts.secure.freee.co.jp/login/accounting?o=true&a=false&e=0
 
 ### ref
 
-- [Pull Requests](https://github.com/itomakiweb-corp/next/pulls)
-- [Contributors](https://github.com/itomakiweb-corp/next/graphs/contributors)
-- [Wiki](https://github.com/itomakiweb-corp/next/wiki)
+- [Pull Requests](https://github.com/hidecharo/next/pulls)
+- [Contributors](https://github.com/hidecharo/next/graphs/contributors)
+- [Wiki](https://github.com/hidecharo/next/wiki)
 - [materials](https://github.com/itomakiweb-corp/dev/tree/master/materials)
     - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181113-concept-sheet.pdf
     - https://github.com/itomakiweb-corp/dev/blob/master/materials/readme/20181122-rough.pdf
